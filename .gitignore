@@ -1,0 +1,78 @@
+# ============================================
+# Homelab DevOps Company - .gitignore
+# ============================================
+
+# --- Secretos y variables de entorno ---
+.env
+*.env
+**/.env
+!env/devops.env.example
+
+# --- Hermes Agent (estado local, auth, memoria) ---
+.hermes/
+auth.json
+**/auth.json
+state.db*
+*.db
+*.db-shm
+*.db-wal
+
+# --- Claves SSH y certificados ---
+*.pem
+*.key
+id_ed25519
+id_rsa
+id_ecdsa
+id_ed25519.pub
+id_rsa.pub
+id_ecdsa.pub
+
+# --- Sistema operativo ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# --- Editores e IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# --- Python (por si más adelante hay scripts) ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+
+# --- Logs y temporales ---
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# --- Archivos de sistema Proxmox / dumps locales ---
+*.vma
+*.vma.zst
+*.vma.gz
+*.zst
+*.raw
+*.qcow2
+*.vmdk
